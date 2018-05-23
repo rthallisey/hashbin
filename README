@@ -1,0 +1,11 @@
+# Hashbin
+
+Copy to ```/usr/bin```:
+```bash
+cp hashbin /usr/bin/hashbin
+```
+
+Try it out:
+```bash
+echo "hi" | hashbin
+```
