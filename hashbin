@@ -1,0 +1,10 @@
+#!/bin/bash
+
+result=$(curl -sf --data-binary @${1:--} https://hastebin.com/documents) || {
+	echo "ERROR: failed to post document" >&2
+	exit 1
+}
+
+key=$(jq -r .key <<< $result)
+
+echo "https://hastebin.com/${key}"
